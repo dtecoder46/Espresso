@@ -1,33 +1,36 @@
+
 # Espresso
 
-A stronger cup of Java, without any semicolons to water it down
+A stronger cup of Java
 
-## How to install/run
+## Why Espresso?
+1. Debugging little semicolon errors consumes time that could've been spent on testing code that actually matters
+2. It's faster than Java
 
+## How to Run
+
+- All
+    1. Install Java (https://dev.java/download/)
+    2. Install Zig (https://ziglang.org/learn/getting-started/#managers)
 - New Java project
     1. Clone the repo
 - Existing Java project
     1. Download the compiler file
     2. Change .java files to .esp
     3. Remove any semicolons in the code
-    4. Run the compiler file: java Compiler.java
-    5. The output is in output.java
+    4. Run the compiler file: java Compiler.zig
+    5. The output is in output.zig
 
 ## Algorithm
 
 1. File format: .esp
-2. Compiler (Java)
+2. Compiler (Zig)
     1. Read the .esp file
-    2. Split the code line by line into an array
-    3. Take the first line of the array, replace the original class name with Output
-    4. Loop over the array of lines
-        1. If a line contains } but has a numerical digit after it, add a semicolon (array)
-        2. Otherwise, if a line contains //, whitespace, or }, skip over it
-        3. Otherwise append a semicolon at the end of the line and put it back into the array of lines
-        4. Add \n at the end of each line
-    5. Concatenate all lines in the array
-    6. Put the combined code into Output.java
+    2. Split the .esp code by spaces into a list of tokens
+    3. Translation
+        1. Create a dictionary of Java keywords and their Zig equivalents
+        2. Loop over the list of Java tokens and add their Zig equivalents to a string
+    4. Put the Zig string into output.zig
 
 ## Sources
 
-Semicolon placement guidelines/Java coding guide: https://www.w3schools.com/java/default.asp
