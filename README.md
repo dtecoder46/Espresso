@@ -11,7 +11,8 @@ A stronger cup of Java
 
 - All
     1. Install Java (https://dev.java/download/)
-    2. Install LLVM (https://releases.llvm.org/)
+    2. Install Clang (https://clang.llvm.org/get_started.html)
+        - Alternatively, type clang in the command line and type "y" when it prompts you to install it
 - New Java project
     1. Clone the repo
 - Existing Java project
@@ -28,9 +29,9 @@ A stronger cup of Java
     1. Read the .esp file
     2. Split the .esp code by spaces into a list of tokens
     3. Translation
-        1. Create a dictionary of Java keywords and their C++  equivalents
+        1. Create a dictionary of Java keywords and their C++ equivalents
         2. Loop over the list of Java tokens and add their C++ equivalents to a string
-    4. Put the Zig string into output.cpp
+    4. Put the C++ string into output.cpp
 
 ## Sources
 
