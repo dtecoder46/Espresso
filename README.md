@@ -37,4 +37,4 @@ A stronger cup of Java
 
 Powered by Lua - https://www.lua.org/
 
-Lua manual - https://www.lua.org/manual/5.5/
+Lua tutorial - https://www.tutorialspoint.com/lua/index.htm
