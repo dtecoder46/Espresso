@@ -11,26 +11,26 @@ A stronger cup of Java
 
 - All
     1. Install Java (https://dev.java/download/)
-    2. Install Zig (https://ziglang.org/learn/getting-started/#managers)
+    2. Install LLVM (https://releases.llvm.org/)
 - New Java project
     1. Clone the repo
 - Existing Java project
     1. Download the compiler file
     2. Change .java files to .esp
     3. Remove any semicolons in the code
-    4. Run the compiler file: java Compiler.zig
-    5. The output is in output.zig
+    4. Run the compiler file: java Compiler.cpp
+    5. The output is in output.cpp
 
 ## Algorithm
 
 1. File format: .esp
-2. Compiler (Zig)
+2. Compiler (C++)
     1. Read the .esp file
     2. Split the .esp code by spaces into a list of tokens
     3. Translation
-        1. Create a dictionary of Java keywords and their Zig equivalents
-        2. Loop over the list of Java tokens and add their Zig equivalents to a string
-    4. Put the Zig string into output.zig
+        1. Create a dictionary of Java keywords and their C++  equivalents
+        2. Loop over the list of Java tokens and add their C++ equivalents to a string
+    4. Put the Zig string into output.cpp
 
 ## Sources
 
