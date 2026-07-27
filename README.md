@@ -10,8 +10,8 @@ A stronger cup of Java
 ## How to Run
 
 - All
-    1. Install Lua (https://www.lua.org/download.html)
-        - Alternatively, type "lua" in the command line and type "y" when it prompts you to install it
+    1. Install Python (https://www.python.org/downloads/)
+    2. Install Go (https://go.dev/dl/)
 - New Java project
     1. Clone the repo
 - Existing Java project
@@ -19,24 +19,22 @@ A stronger cup of Java
     2. Change .java files to .esp
     3. Remove any semicolons in the code
     4. Run the compiler file
-        1. lua compiler.lua
-    5. The output is in output.lua
+        1. python3 compiler.py
+    5. The output is in output.go
 
 ## Algorithm
 
 1. File format: .esp
-2. Compiler (Lua)
+2. Compiler (Python)
     1. Read the .esp file
     2. Split the .esp code by spaces into a list of tokens
     3. Translation
-        1. Create a dictionary of Java keywords and their Lua equivalents
-        2. Loop over the list of Java tokens and add their Lua equivalents to a string
-    4. Put the Lua string into output.lua
+        1. Create a dictionary of Java keywords and their Go equivalents
+        2. Loop over the list of Java tokens and add their Go equivalents to a string
+    4. Put the Go string into output.go
 
 ## Credits/Sources
 
-Powered by Lua - https://www.lua.org/
+Python tutorial - https://www.w3schools.com/python/default.asp
 
-Lua tutorial - https://www.tutorialspoint.com/lua/index.htm
-
-LuaUnit docs - https://luaunit.readthedocs.io/en/latest/0_readme.html
+Go tutorial - https://www.w3schools.com/go/index.php
