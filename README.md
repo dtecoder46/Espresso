@@ -24,14 +24,22 @@ A stronger cup of Java
 
 ## Algorithm
 
-1. File format: .esp
-2. Compiler (Python)
-    1. Read the .esp file
-    2. Split the .esp code by spaces into a list of tokens
-    3. Translation
-        1. Create a dictionary of Java keywords and their Go equivalents
-        2. Loop over the list of Java tokens and add their Go equivalents to a string
-    4. Put the Go string into output.go
+- File format: .esp
+- Compiler (Python)
+    - Read the .esp file
+    - Create an array of lines by splitting on newline
+    - Preprocessing
+        - Remove the first and last lines of the .esp file, since a main class is not required in Go
+    - Parsing
+        - Loop over the list of lines
+            - Split each line by spaces into a list of tokens
+            - Put the line list into an outer list
+    - Translate to Go
+        - Create a dictionary of Java tokens and their Go equivalents
+        - Loop over each line
+            - Loop over the list of Java tokens
+                - Call their Go equivalents and add them to a Go string
+                - Write the Go string into output.go
 
 ## Credits/Sources
 
