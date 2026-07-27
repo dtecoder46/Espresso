@@ -18,8 +18,14 @@ function read_file()
 
 end
 
-
+function parser(text)
+	for token in string.gmatch(text, "%S+") do
+		print(token)
+	end
+end
 
 espresso_string = read_file()
+
+parser(espresso_string)
 
 os.exit( lu.LuaUnit.run() )
