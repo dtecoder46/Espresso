@@ -11,10 +11,12 @@ def file_read():
 
 	espresso_string = espresso_file.read()
 
-	print(espresso_string)
-
 	espresso_file.close()
 
 	return espresso_string
 
 espresso_string = file_read()
+
+espresso_lines = espresso_string.splitlines()
+
+print(espresso_lines)
