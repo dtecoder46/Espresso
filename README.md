@@ -30,6 +30,7 @@ A stronger cup of Java
     - Create an array of lines by splitting on newline
     - Preprocessing
         - Remove the first and last lines of the .esp file, since a main class is not required in Go
+	- Remove excess tabs since the outer level (main class) was removed
     - Parsing
         - Loop over the list of lines
             - Split each line by spaces into a list of tokens
