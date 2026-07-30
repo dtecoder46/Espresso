@@ -31,6 +31,7 @@ def preprocess(code_lines):
 
 	while line_index < len(code_lines):
 		code_lines[line_index] = code_lines[line_index].replace("\t", "", 1)
+		code_lines[line_index] = code_lines[line_index].replace("public static", "func") # simplifies parsing later on
 		line_index += 1
 
 	return code_lines
@@ -47,6 +48,11 @@ def parser(lines_list):
 	
 	for line in lines_list:
 		line_tokens = line.split(" ")
+
+		if line_tokens[0] == "func":
+			line_tokens.insert(3, line_tokens[1])
+			line_tokens.pop(1)		
+
 		tokens.append(line_tokens)
 	
 	return tokens
