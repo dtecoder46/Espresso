@@ -50,7 +50,7 @@ def parser(lines_list):
 		line_tokens = line.split(" ")
 
 		if line_tokens[0] == "func":
-			line_tokens.insert(3, line_tokens[1])
+			line_tokens.insert(4, line_tokens[1])
 			line_tokens.pop(1)		
 
 		tokens.append(line_tokens)
