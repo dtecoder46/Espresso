@@ -1,5 +1,4 @@
 """
-Name: file_read()
 Purpose: Reads the .esp file
 Parameters: none
 Return: espresso_string - the file contents 
@@ -36,6 +35,22 @@ def preprocess(code_lines):
 
 	return code_lines
 
+"""
+Name: parser()
+Purpose: to break down a list of code lines into a 2D array of tokens
+Parameters: lines_list - the list of code lines
+Return: tokens - the 2D array of tokens
+"""
+
+def parser(lines_list):
+	tokens = []
+	
+	for line in lines_list:
+		line_tokens = line.split(" ")
+		tokens.append(line_tokens)
+	
+	return tokens
+
 espresso_string = file_read()
 
 # Break the .esp code into an array of lines
@@ -46,4 +61,7 @@ espresso_lines = espresso_string.splitlines()
 
 espresso_lines = preprocess(espresso_lines)
 
-print(espresso_lines)
+# Parse
+
+tokens = parser(espresso_lines)
+print(tokens)
