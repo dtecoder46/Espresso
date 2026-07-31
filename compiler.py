@@ -50,8 +50,18 @@ def parser(lines_list):
 		line_tokens = line.split(" ")
 
 		if line_tokens[0] == "func":
-			line_tokens.insert(4, line_tokens[1])
+			line_tokens.insert(5, line_tokens[1])
 			line_tokens.pop(1)		
+		
+		for token_index in range(len(line_tokens) - 1):
+
+			# Checks for two consecutive tokens containing matching parentheses
+			if line_tokens[token_index].find("(") != -1 and line_tokens[token_index + 1].find(")") != -1: 
+
+				line_tokens[token_index] = line_tokens[token_index] + " " + line_tokens[token_index + 1] 
+				# Merge the tokens into the first token's slot
+				
+				line_tokens.pop(token_index + 1) # Remove the previous slot of the other token
 
 		tokens.append(line_tokens)
 	
