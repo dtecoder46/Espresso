@@ -24,7 +24,41 @@ public class Compiler {
 		// Split fileContents into an array of lines
 
 		String[] arrayLines = fileContents.split("\n");
+		
+		String output = ""; // output string
 
-		System.out.println(arrayLines[0]);
+		// Loop over the array of lines
+		
+		for (int index = 0; index < arrayLines.length; index++) {
+			
+			int middleIndex = (arrayLines[index].length() - 1) / 2;
+
+			String rightLine = arrayLines[index].substring(middleIndex); // Gets the right half of each line
+			
+			String leftLine = arrayLines[index].substring(0, middleIndex);
+
+			if (arrayLines[index].contains("{") == true || arrayLines[index].contains("}") == true || arrayLines[index].isEmpty() == true) {
+				/* 
+				 * no semicolons will be placed after curly braces or on blank lines, 
+				 * so no need to strip whitespace to accomodate semicolons
+				 * */
+
+				arrayLines[index] = leftLine + rightLine; 
+			}
+			else {
+				/*
+				 * if a semicolon is needed at the end, 
+				 * then strip any whitespace on the right 
+				 * that the user may have accidentally put in
+				*/
+
+				arrayLines[index] = leftLine + rightLine.trim();
+				arrayLines[index] = arrayLines[index] + ";";
+			}
+			
+			output += arrayLines[index];
+		}
+
+		System.out.println(output);
 	}
 }
