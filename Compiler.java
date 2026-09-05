@@ -52,7 +52,8 @@ public class Compiler {
 				 * that the user may have accidentally put in
 				*/
 
-				arrayLines[index] = leftLine + rightLine.trim();
+				arrayLines[index] = leftLine + rightLine.replaceAll("\\s+$", "");
+
 				arrayLines[index] = arrayLines[index] + ";";
 			}
 			
