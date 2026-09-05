@@ -5,7 +5,7 @@ A stronger cup of Java
 
 ## Why Espresso?
 1. Debugging little semicolon errors consumes time that could've been spent on testing code that actually matters
-
+2. The syntax for writing to a file is complex, so Espresso bundles a writeFile class for you
 
 ## How to Run
 

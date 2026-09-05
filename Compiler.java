@@ -58,7 +58,20 @@ public class Compiler {
 			
 			output += arrayLines[index];
 		}
+		
+		Scanner input = new Scanner(System.in);
 
-		System.out.println(output);
+		print("What do you want to name the Java class containing your compiled code?: ");
+
+		String outputClass = input.nextLine();
+		String filepath = outputClass + ".java";
+		
+		writeFile fileWriter = new writeFile(output, filepath);
+
+		fileWriter.write();
+	}
+
+	public static void print(String text) {
+		System.out.println(text);
 	}
 }
