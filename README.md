@@ -6,6 +6,12 @@ A stronger cup of Java
 ## Why Espresso?
 1. Debugging little semicolon errors consumes time that could've been spent on testing code that actually matters
 2. The syntax for writing to a file is complex, so Espresso bundles a writeFile class for you
+3. Writing out "System.out.println" whenever doing quick tests can be tedious, so Espresso abstracts that syntax away from you, and now you just write the following in your Main.esp file:
+```
+Print printer = new Print ("Your text here")
+
+printer.print()
+```
 
 ## How to Run
 
