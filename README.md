@@ -19,7 +19,8 @@ A stronger cup of Java
     3. Remove any semicolons in the code
     4. Run the compiler file
         1. java Compiler.java
-    5. The output is in Output.java
+    5. The output is in [class name].java, depending on what you input for the class name
+        1. Run your compiled Java file using "java [class name].java"
 
 ## Algorithm
 
